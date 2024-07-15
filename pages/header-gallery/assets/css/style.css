@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--Desaturated-Red: hsl(24, 36%, 70%);
+--Soft-Red: hsl(29, 93%, 68%);
+--Dark-Grayish-Red: hsl(0, 6%, 24%);
+--gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(46, 74%, 74%));
+--gradient-2: linear-gradient(135deg, hsl(36, 80%, 86%), hsl(38, 74%, 74%));
+--fw-light: 300;
+--fw-normal: 400;
+--fw-bold: 600;
+
+font: 400 16px "Josefin Sans", sans-serif;
+}
+
+body {
+background: var(--gradient-1);
+}
+
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 2rem;
+padding: 2rem;
+}
+
+.header img {
+height: 5rem;
+}
+
+h1, h3, p {
+color: var(--Dark-Grayish-Red);
+}
+
+.button {
+position: relative;
+right: -2px;
+width: 100px;
+height: calc(100% + 4px);
+background: var(--gradient-2);
+border: none;
+border-radius: 50px;
+box-shadow: 0px 10px 20px -10px var(--Soft-Red);
+cursor: pointer;
+transition: 0.3s;
+padding: 10px;
+text-decoration: none;
+color: var(--Dark-Grayish-Red);
+text-align: center;
+}
+
+.button:hover {
+background: var(--gradient-1);
+transform: scale(1.1);
+}
+
+.accordion {
+background-color: transparent;
+color: var(--Dark-Grayish-Red);
+cursor: pointer;
+padding: 18px;
+width: 100%;
+text-align: left;
+border: none;
+outline: none;
+transition: 0.4s;
+}
+
+.active, .accordion:hover {
+background: var(--gradient-2);
+}
+
+.panel {
+padding: 3px 18px;
+background-color: white;
+display: none;
+overflow: hidden;
+}
+
+.logo {
+height: 40px;
+transition: all 0.3s ease;
+}
+
+.nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem;
+}
+
+.nav-items {
+display: flex;
+align-items: center;
+}
+
+a {
+text-decoration: none;
+color: var(--Dark-Grayish-Red);
+padding: 1rem 1rem;
+transition: all 0.3s ease;
+}
+
+.call-to-action {
+border: 2px solid var(--Dark-Grayish-Red);
+padding: 0.5rem 1rem;
+border-radius: 2rem;
+color: var(--Dark-Grayish-Red);
+}
+
+.call-to-action:hover {
+border-color: var(--Soft-Red);
+color: var(--Soft-Red);
+}
+
+.bi {
+font-size: 1.5rem;
+color: var(--Dark-Grayish-Red);
+}
+
+.profile:hover {
+color: var(--Soft-Red);
+}
+
+.nav-center {
+display: flex;
+align-items: center;
+gap: 2rem;
+justify-content: center;
+}
+
+.side-bar {
+display: flex;
+flex-direction: column;
+left: 0;
+align-items: center;
+align-self: flex-start;
+gap: 4rem;
+background: var(--gradient-1);
+padding: 1rem 0;
+width: 4.5rem;
+height: 75vh;
+}
+
+.nav-side {
+display: flex;
+flex-direction: column;
+}
+
+.hover a:hover {
+background: var(--Soft-Red);
+color: white;
+}
+
+.hover a:active {
+background: var(--Soft-Red);
+color: white;
+}
+
+.rotate:hover {
+transform: rotate(180deg);
+}
+
+.pop a:hover {
+transform: translate(-10px, -10px);
+}
+
+.title {
+color: transparent;
+transform: translateX(-5rem);
+transition: all 0.3s ease;
+}
+
+.title:hover {
+color: var(--Dark-Grayish-Red);
+transform: translateX(1rem);
+transition: all 0.3s ease;
+}
+
+.descale {
+padding: .5rem;
+}
+
+.descale:hover a:not(:hover), .descale:hover .logo:not(:hover) {
+transform: scale(0.85);
+}
+
+.descale:hover a:not(:hover) {
+opacity: 0.5;
+}
+
+.descale .logo:hover {
+box-shadow: 0px 10px 20px -10px var(--Soft-Red);
+}
+
+.descale .logo {
+height: 3rem;
+}
+
+.descale a:active {
+color: var(--Soft-Red);
+}
+
+.scale:hover {
+transform: scale(1.2);
+filter: drop-shadow(0px 10px 20px var(--Soft-Red));
+}
+
+.flip:hover a:not(:hover) {
+transform: rotateY(180deg) scale(.7);
+}
+
+.tooltip {
+position: absolute;
+left: 2rem;
+background: transparent;
+color: transparent;
+padding: .3rem .7rem;
+border: transparent 1px solid;
+border-radius: 5px;
+transition: all .3s ease;
+}
+
+.socials:hover .tooltip {
+left: 5rem;
+color: var(--Dark-Grayish-Red);
+background: white;
+border: var(--Soft-Red) 1px solid;
+}
+
+.descale2 {
+padding: 1.5rem;
+}
+
+.descale2:hover a:not(:hover) {
+transform: scale(0.85);
+}
+
+.descale2:hover a:not(:hover) {
+opacity: 0.5;
+}
+
+.descale2 .logo:hover {
+transform: scale(1.25);
+}
+
+.descale2 .a:hover {
+transform: scale(2);
+}
+
+.descale2 .logo {
+height: 3rem;
+transition: all ease .2s;
+}
+
+.descale2 a:active {
+color: var(--Soft-Red);
+}
+
+.descale2 .logo:active {
+transform: scale(.8);
+filter: drop-shadow(0 0 10px var(--Soft-Red));
+}
+
+.show {
+position: absolute;
+width: 12px;
+transform: translateX(13px);
+transition: all ease .2s;
+z-index: -1;
+}
+
+.name {
+color: transparent;
+position: absolute;
+padding-left: 28px;
+transform: translateY(0) scale(0);
+transition: all ease .2s;
+}
+
+.descale2 .logo:active ~ .name {
+color: var(--Dark-Grayish-Red);
+transform: translate(100px, 30px) scale(1);
+}
+
+.descale2 .logo:active ~ .show {
+  z-index: 1;
+  &.h {
+    transform: translate(150px, -30px) scale(1.75);
+  }
+  
+  &.o {
+    transform: translate(175px, -35px) scale(1.75);
+  }
+
+  &.k {
+    transform: translate(200px, -30px) scale(1.75);
+  }
+}
